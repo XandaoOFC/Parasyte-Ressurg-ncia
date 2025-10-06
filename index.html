@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parasyte: Ressurgência</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; background: #fff; color: #000; margin: 0; padding: 0; line-height: 1.6; }
+    header { background: #f5f5f5; padding: 1rem; text-align: center; border-bottom: 2px solid #a00; }
+    header h1 { color: #a00; margin: 0; font-size: 1.5rem; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
+    nav button { padding: 0.7rem 1rem; border: 1px solid #a00; background: none; color: #a00; cursor: pointer; border-radius: 5px; font-size: 1rem; }
+    nav button.active { background: #a00; color: #fff; }
+    section { max-width: 95%; margin: 1.5rem auto; padding: 0 1rem; }
+    section h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .scene-description { font-style: italic; color: #900; margin: 1rem 0; font-size: 0.95rem; }
+    .hidden { display: none; }
+    footer { text-align: center; padding: 1rem; color: #555; border-top: 1px solid #ccc; margin-top: 2rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>  <header>
+    <h1>Parasyte: Ressurgência</h1>
+    <nav>
+      <button class="tab-btn active" data-tab="ato1">Ato 1</button>
+      <button class="tab-btn" data-tab="ato2">Ato 2</button>
+      <button class="tab-btn" data-tab="ato3">Ato 3</button>
+      <button class="tab-btn" data-tab="ato4">Ato 4</button>
+      <button class="tab-btn" data-tab="epilogo">Epílogo</button>
+    </nav>
+  </header>  <section id="ato1">
+    <h2>Ato 1 — O Desenho e a Infecção</h2>
+    <p class="scene-description">[Cena visual: Beco chuvoso, néons vermelhos tremendo, reflexos no asfalto molhado. Um garoto, Akira, olha para um gato morto e algo salta do corpo, perfurando seu braço.]</p>
+    <p>Akira acorda no quarto, suando frio. Seu braço se move sozinho e fala: "Hospedeiro compatível. Integração parcial concluída." Ele desmaia, sentindo o medo e o desconforto do desconhecido.</p>
+    <p class="scene-description">[Cena visual: Akira se olhando no espelho, o braço pulsando e formando um olho no meio das veias.]</p>
+  </section>  <section id="ato2" class="hidden">
+    <h2>Ato 2 — O Primeiro Sangue</h2>
+    <p class="scene-description">[Cena visual: Banheiro da escola, luz fria, reflexos nos azulejos. Uma aluna se transforma em um parasita horrível, sua carne se abre como pétalas afiadas.]</p>
+    <p>Akira, com Nero insistindo para agir, hesita. O braço explode em lâminas ósseas, defendendo os estudantes. O parasita inimigo cai. Akira treme, percebendo que matou para sobreviver.</p>
+  </section>  <section id="ato3" class="hidden">
+    <h2>Ato 3 — Encontro com o Fantasma</h2>
+    <p class="scene-description">[Cena visual: Estação de metrô, luzes metálicas, reflexos de chuva. Shinichi aparece, com cicatriz no braço, guiando Akira para um abrigo secreto.]</p>
+    <p>Ali, humanos e parasitas coexistem. Akira observa crianças brincando com parasitas domesticados. Nero, dentro de Akira, sente algo estranho — a empatia. O encontro com Shinichi é um ponto de virada.</p>
+  </section>  <section id="ato4" class="hidden">
+    <h2>Ato 4 — A Extinção dos Puros</h2>
+    <p class="scene-description">[Cena visual: Centro de Tóquio, explosões, helicópteros, sirenes. O governo inicia operação de extermínio em massa.]</p>
+    <p>Shinichi é atingido e morre nos braços de Akira. Nero fala pela primeira vez com voz humana: "Agora entendo... dor é o que nos conecta." Akira se funde completamente com Nero e enfrenta os parasitas, em um massacre poético e trágico.</p>
+  </section>  <section id="epilogo" class="hidden">
+    <h2>Epílogo — O Último Desenho</h2>
+    <p class="scene-description">[Cena visual: Galeria de arte, paredes brancas, desenhos de híbridos humanos e parasitas, detalhes em vermelho sangue nos traços.]</p>
+    <p>O museu exibe os desenhos de Akira. A câmera percorre cada obra, mostrando a tentativa de coexistência entre espécies. Uma criança desenha no chão a figura de um garoto com um olho na mão. Fade out. Silêncio. Chuva.</p>
+  </section>  <footer>
+    © 2025 Parasyte: Ressurgência — Roteiro original por ChatGPT.
+  </footer>  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('section');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const tab = btn.getAttribute('data-tab');
+        sections.forEach(s => s.classList.add('hidden'));
+        document.getElementById(tab).classList.remove('hidden');
+      });
+    });
+  </script></body>
+</html>
